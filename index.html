@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe | Enhanced</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tic Tac Toe</h1>
+            <p>Play with a friend or challenge our unbeatable AI.</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="control-group">
+                    <span class="control-label">Game Mode:</span>
+                    <div class="custom-radio">
+                        <input type="radio" id="twoPlayers" name="mode" value="twoPlayers" checked>
+                        <label for="twoPlayers">👤 vs 👤</label>
+                        <input type="radio" id="vsComputer" name="mode" value="vsComputer">
+                        <label for="vsComputer">👤 vs 🤖</label>
+                    </div>
+                </div>
+                <div class="control-group" id="difficulty-controls" style="display: none;">
+                    <span class="control-label">AI Difficulty:</span>
+                    <div class="custom-radio">
+                        <input type="radio" id="easy" name="difficulty" value="easy" checked>
+                        <label for="easy">Easy</label>
+                        <input type="radio" id="unbeatable" name="difficulty" value="unbeatable">
+                        <label for="unbeatable">Unbeatable</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div class="status-panel"></div>
+                <div class="board"></div>
+                <div class="action-buttons">
+                    <button id="newGameBtn">New Game</button>
+                    <button id="undoBtn">Undo</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="popup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <h2 id="popupMessage"></h2>
+            <button id="popupNewGameBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
